@@ -11,3 +11,4 @@ export default function CalendarPage() {
     </div>
   );
 }
+export const dynamic = "force-dynamic";
