@@ -129,8 +129,8 @@ function CreateTaskForm({ onClose }: { onClose: () => void }) {
       await createTask(data);
       const prompt = generateFeedbackPrompt(data, [data]);
       toast({ title: "Task created successfully", description: prompt });
-      const feedback = await getGeminiFeedback(prompt);
-      toast({ title: "AI Feedback", description: feedback });
+      // const feedback = await getGeminiFeedback(prompt);
+      toast({ title: "AI Feedback", description: "ai not working" });
 
       onClose();
       router.push("/");
