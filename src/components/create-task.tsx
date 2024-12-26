@@ -76,7 +76,7 @@ function CreateTaskForm({ onClose }: { onClose: () => void }) {
 
   const { toast } = useToast();
 
-  const generateFeedbackPrompt = (newTask: any, monthlyTasks: any) => {
+  const generateFeedbackPrompt = (newTask: Task, monthlyTasks: Task[]) => {
     const formattedMonthlyTasks = monthlyTasks
       .map(
         (task: any) =>
@@ -171,7 +171,7 @@ function CreateTaskForm({ onClose }: { onClose: () => void }) {
         <label className="text-sm">Priority</label>
         <Select
           defaultValue="MEDIUM"
-          onValueChange={(value: any) => {
+          onValueChange={(value: string) => {
             setValue("priority", value);
           }}
         >

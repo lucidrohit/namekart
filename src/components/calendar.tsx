@@ -94,16 +94,12 @@ const TaskCalendar: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
           <div className="flex flex-col">
             <Calendar
-              //   @ts-ignore
-              onChange={setSelectedDate}
+              onChange={(value) => setSelectedDate(value as Date)}
               value={selectedDate}
               tileContent={getTileContent}
               tileClassName={getTileClassName}
               className="w-full flex-grow"
               minDetail="month"
-              //   @ts-ignore
-
-              //    calendarType='US'
             />
             <div className="mt-4 flex justify-center gap-6">
               <div className="flex items-center gap-2">
